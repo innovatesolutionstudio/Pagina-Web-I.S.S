@@ -1,0 +1,253 @@
+.iss-cv {
+  font-family: 'Segoe UI', sans-serif;
+  color: #1c1c1c;
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  border-top: 8px solid #000;
+}
+
+.iss-cv-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.iss-cv-name-section {
+  max-width: 60%;
+}
+
+.iss-cv-name {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #000;
+}
+
+.iss-cv-role {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.iss-cv-contact {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.iss-cv-section {
+  margin-bottom: 30px;
+}
+
+.iss-cv-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #000;
+  border-left: 4px solid #000;
+  padding-left: 10px;
+}
+
+.iss-cv-section p,
+.iss-cv-section ul {
+  color: #333;
+  font-size: 1rem;
+}
+
+.iss-cv-section ul {
+  list-style: disc inside;
+  margin-top: 10px;
+}
+
+.iss-cv-cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.iss-cv-cert-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.iss-cv-cert-col h3 {
+  margin-top: 20px;
+  color: #000;
+}
+
+.iss-cv-cert-col ul {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style: disc;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+
+/* Imagen principal de presentación */
+.iss-cv-header-img-circular {
+  width: 320px;
+  height: 320px;
+  margin: 30px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #c8c8c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iss-cv-header-img-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+/* Carrusel de imágenes */
+.iss-cv-carousel {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.iss-cv-carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+}
+
+.iss-cv-carousel-track img {
+  height: 150px;
+  width: auto;
+  max-width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.iss-cv-carousel-track img:hover {
+  transform: scale(1.03);
+  border-color: #000;
+}
+
+@media (max-width: 1024px) {
+  .iss-cv {
+    padding: 30px;
+  }
+
+  .iss-cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .iss-cv-name {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .iss-cv-role {
+    font-size: 1rem;
+  }
+
+  .iss-cv-contact {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .iss-cv {
+    padding: 20px;
+  }
+
+  .iss-cv-name {
+    font-size: 1.6rem;
+  }
+
+  .iss-cv-role {
+    font-size: 0.95rem;
+  }
+
+  .iss-cv-section h2 {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+  .iss-cv-section p,
+  .iss-cv-section ul {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .iss-cv-header-img-circular {
+    width: 220px;
+    height: 220px;
+  }
+
+  .iss-cv-carousel-track img {
+    height: 130px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iss-cv {
+    padding: 15px;
+  }
+
+  .iss-cv-name {
+    font-size: 1.4rem;
+  }
+
+  .iss-cv-role {
+    font-size: 0.9rem;
+  }
+
+  .iss-cv-contact {
+    font-size: 0.85rem;
+  }
+
+  .iss-cv-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .iss-cv-section p,
+  .iss-cv-section ul {
+    font-size: 0.9rem;
+  }
+
+  .iss-cv-header-img-circular {
+    width: 180px;
+    height: 180px;
+  }
+
+  .iss-cv-cert-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .iss-cv-carousel-track {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .iss-cv-carousel-track img {
+    height: 110px;
+    max-width: 160px;
+  }
+}

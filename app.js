@@ -1,23 +1,23 @@
-const path = require('path');
 const express = require('express');
 const app = express();
+const path = require('path');
+const port = 3002;
 
-const port = process.env.PORT || 3000;
-
-// Configura EJS como motor de plantillas
+// Configurar motor de plantillas y ruta de vistas
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, 'views'));
 
-// Configura la carpeta 'public' para servir archivos estáticos
-
+// Middleware para archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// Importa y usa el enrutador de páginas
-const paginaRoutes = require('./src/routes/pagina/pagina');
-app.use('/', paginaRoutes);
+// Importar y usar las rutas
+const indexRoutes = require('./routes/index');
 
 
+
+app.use(indexRoutes);
+
+// Iniciar el servidor
 app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+  console.log(`Servidor escuchando en http://localhost:${port}`);
 });
