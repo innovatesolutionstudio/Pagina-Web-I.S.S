@@ -28,5 +28,13 @@ router.get('/Eikar-Quispe', (req, res) => {
 
 
 
+let contadorPing = 0;
 
+router.get('/ping', (req, res) => {
+  contadorPing++;
+  console.log(`🔁 Ping recibido #${contadorPing}`);
+  res.send(`Ping ${contadorPing}`);
+});
+
+console.log(contadorPing)
 module.exports = router;

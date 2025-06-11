@@ -21,3 +21,10 @@ app.use(indexRoutes);
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
+
+
+
+setInterval(() => {
+  const http = require('http');
+  http.get('https://pagina-web-i-s-s.onrender.com/ping');
+}, 6000); // cada 10 minutos
