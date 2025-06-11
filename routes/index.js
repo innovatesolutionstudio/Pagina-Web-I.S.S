@@ -8,9 +8,24 @@ router.get('/', (req, res) => {
 
 
 
-router.get('/jerome', (req, res) => {
+router.get('/Jerome-Jimenez', (req, res) => {
   res.render('./perfiles/jerome');
 });
+
+router.get('/Kevin-Quispe', (req, res) => {
+  res.render('./perfiles/kevin');
+});
+
+
+router.get('/Cindy-Torrez', (req, res) => {
+  res.render('./perfiles/cindy');
+});
+
+
+router.get('/Eikar-Quispe', (req, res) => {
+  res.render('./perfiles/eikar');
+});
+
 
 
 
